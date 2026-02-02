@@ -1,0 +1,20 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/python
+{
+	"name": "Python 3",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"image": "mcr.microsoft.com/devcontainers/python:2-3.13-trixie",
+	"postCreateCommand": "sudo apt get update && sudo apt-get install -y libgl1 libglib2.0-0t64 && pip install --upgrade pip && pip install uv && uv sync",
+	"customizations": {
+		"vscode": {
+			"settings": {
+				"python.defaultInterpreterPath": ".venv/bin/python",
+				"python.terminal.activateEnvironment": true
+			},
+			"extensions": [
+				"ms-python.python",
+				"charliermarsh.uv"
+			]
+		}
+	}
+}

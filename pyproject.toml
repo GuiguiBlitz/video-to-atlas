@@ -1,0 +1,10 @@
+[project]
+name = "video-to-atlas"
+version = "0.1.0"
+description = "Turn a video into a 2d texture atlas."
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "gradio>=6.5.1",
+    "opencv-python>=4.13.0.90",
+]
